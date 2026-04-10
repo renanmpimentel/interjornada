@@ -1,90 +1,74 @@
-# Calculadora de Interjornada (CLT)
+# Interjornada (CLT)
 
-Interface web simples focada em hora extra com jornada normal editavel.
+Calculadora web para apoio na validacao de interjornada minima de 11 horas (CLT, art. 66), com base na jornada normal e na hora extra informadas.
 
-Layout em React com Vite, componentizado e pronto para evoluir.
+## Objetivo
 
-## Open Source
-
-Este projeto agora e aberto para contribuicoes da comunidade.
-
-- Licenca: MIT (veja `LICENSE`)
-- Guia de contribuicao: veja `CONTRIBUTING.md`
-- Seguranca: nunca commitar segredos; use `.env` local e mantenha `.env.example` como referencia
-- Governanca: `main`/`master` protegidas; contribuicoes entram via Pull Request
-
-Voce informa:
-
-- inicio e fim da jornada normal;
-
-- entrada na hora extra;
-- saida da hora extra.
-- se a saida foi apos meia-noite.
-
-E a pagina calcula automaticamente:
-
-- duracao da hora extra;
-- inicio minimo da proxima jornada para respeitar 11h de interjornada (CLT art. 66);
-- comparacao com o inicio da jornada normal que voce definiu.
-
-## Como usar
-
-1. Instale as dependencias:
-
-```bash
-npm install
-```
-
-2. Rode em ambiente de desenvolvimento:
-
-```bash
-npm run dev
-```
-
-3. Abra a URL mostrada no terminal (normalmente `http://localhost:5173`).
-4. Informe inicio/fim da jornada normal.
-5. Informe inicio/fim da hora extra.
-6. Se necessario, marque que a saida foi no dia seguinte.
-7. O resultado aparece automaticamente.
-
-## Build de producao
-
-```bash
-npm run build
-```
-
-## Scripts disponiveis
-
-- `npm run dev`
-- `npm run build`
-- `npm run preview`
+O projeto ajuda a responder, de forma rapida:
+- qual foi a duracao da hora extra
+- qual o horario minimo de inicio da proxima jornada
+- se o inicio padrao da jornada pode ser mantido
 
 ## Stack
 
 - React 18
 - Vite 5
-- CSS modular por componente de interface
+- CSS
+- Vitest (testes)
+- ESLint (lint)
+- TypeScript checker em modo JS (`checkJs`) para typecheck
 
-## Monetizacao (Google AdSense)
+## Requisitos
 
-1. Crie um arquivo `.env` na raiz do projeto.
-2. Adicione suas chaves:
+- Node.js 18+
+- npm 9+
+
+## Desenvolvimento local
 
 ```bash
-VITE_ADSENSE_CLIENT=ca-pub-xxxxxxxxxxxxxxxx
-VITE_ADSENSE_SLOT=1234567890
-VITE_ADSENSE_ADTEST=off
+npm install
+npm run dev
 ```
 
-3. Reinicie o servidor (`npm run dev`).
+Abra a URL exibida no terminal (normalmente `http://localhost:5173`).
 
-Sem essas variaveis, a UI mostra um placeholder de anuncio.
+## Scripts
 
-### Deploy (exemplo: Netlify)
+```bash
+npm run dev
+npm run build
+npm run preview
+npm run lint
+npm run typecheck
+npm test
+```
 
-No painel do Netlify: **Site configuration** > **Environment variables** e adicione as mesmas variaveis.
-Depois, em **Deploys**, execute **Trigger deploy** > **Deploy site**.
+## Contribuindo
 
-## Observacao
+1. Faça fork do repositório.
+2. Crie uma branch para sua mudança.
+3. Rode as validacoes locais:
 
-Ferramenta de apoio e orientacao geral. Para casos especificos, consulte RH, sindicato ou assessoria juridica.
+```bash
+npm run lint
+npm run typecheck
+npm test
+```
+
+4. Abra um Pull Request.
+
+Consulte [`CONTRIBUTING.md`](./CONTRIBUTING.md) para detalhes.
+
+## Governança
+
+- Branches `main` e `master` protegidas
+- Fluxo oficial via Pull Request
+- `CODEOWNERS` configurado
+
+## Licença
+
+Este projeto está sob licença MIT. Veja [`LICENSE`](./LICENSE).
+
+## Aviso
+
+Ferramenta de apoio e orientacao geral. Para situacoes especificas, consulte RH, sindicato ou assessoria juridica.
