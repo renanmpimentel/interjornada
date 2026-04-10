@@ -4,6 +4,15 @@ Interface web simples focada em hora extra com jornada normal editavel.
 
 Layout em React com Vite, componentizado e pronto para evoluir.
 
+## Open Source
+
+Este projeto agora e aberto para contribuicoes da comunidade.
+
+- Licenca: MIT (veja `LICENSE`)
+- Guia de contribuicao: veja `CONTRIBUTING.md`
+- Seguranca: nunca commitar segredos; use `.env` local e mantenha `.env.example` como referencia
+- Governanca: `main`/`master` protegidas; contribuicoes entram via Pull Request
+
 Voce informa:
 
 - inicio e fim da jornada normal;
@@ -44,6 +53,12 @@ npm run dev
 npm run build
 ```
 
+## Scripts disponiveis
+
+- `npm run dev`
+- `npm run build`
+- `npm run preview`
+
 ## Stack
 
 - React 18
@@ -65,7 +80,7 @@ VITE_ADSENSE_ADTEST=off
 
 Sem essas variaveis, a UI mostra um placeholder de anuncio.
 
-### Netlify (producao)
+### Deploy (exemplo: Netlify)
 
 No painel do Netlify: **Site configuration** > **Environment variables** e adicione as mesmas variaveis.
 Depois, em **Deploys**, execute **Trigger deploy** > **Deploy site**.

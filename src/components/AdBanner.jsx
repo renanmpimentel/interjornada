@@ -7,7 +7,7 @@ function ensureAdSenseScript(client) {
     return;
   }
 
-  const existing = document.querySelector(`script[data-adsense-client=\"${client}\"]`);
+  const existing = document.querySelector(`script[data-adsense-client="${client}"]`);
   if (existing) {
     return;
   }
