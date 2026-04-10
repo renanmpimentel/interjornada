@@ -1,13 +1,13 @@
 # Interjornada (CLT)
 
-Calculadora web para apoio na validacao de interjornada minima de 11 horas (CLT, art. 66), com base na jornada normal e na hora extra informadas.
+Calculadora web para apoio na validação de interjornada mínima de 11 horas (CLT, art. 66), com base na jornada normal e na hora extra informadas.
 
 ## Objetivo
 
-O projeto ajuda a responder, de forma rapida:
-- qual foi a duracao da hora extra
-- qual o horario minimo de inicio da proxima jornada
-- se o inicio padrao da jornada pode ser mantido
+O projeto ajuda a responder, de forma rápida:
+- qual foi a duração da hora extra
+- qual o horário mínimo de início da próxima jornada
+- se o início padrão da jornada pode ser mantido
 
 ## Stack
 
@@ -20,8 +20,8 @@ O projeto ajuda a responder, de forma rapida:
 
 ## Requisitos
 
-- Node.js 18+
-- npm 9+
+- Node.js 24.14.1 LTS (ou superior na linha LTS atual)
+- npm 10+
 
 ## Desenvolvimento local
 
@@ -47,7 +47,7 @@ npm test
 
 1. Faça fork do repositório.
 2. Crie uma branch para sua mudança.
-3. Rode as validacoes locais:
+3. Rode as validações locais:
 
 ```bash
 npm run lint
@@ -71,4 +71,4 @@ Este projeto está sob licença MIT. Veja [`LICENSE`](./LICENSE).
 
 ## Aviso
 
-Ferramenta de apoio e orientacao geral. Para situacoes especificas, consulte RH, sindicato ou assessoria juridica.
+Ferramenta de apoio e orientação geral. Para situações específicas, consulte RH, sindicato ou assessoria jurídica.
