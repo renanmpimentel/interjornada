@@ -241,7 +241,7 @@ export default function App() {
         </a>
         {" "}
         |{" "}
-        <a href="/politica-de-privacidade.html" className="footer-link">
+        <a href={`${import.meta.env.BASE_URL}politica-de-privacidade.html`} className="footer-link">
           Politica de privacidade
         </a>
       </footer>
