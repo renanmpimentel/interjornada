@@ -1,4 +1,5 @@
 import { useEffect } from "react";
+import { isMonetizationEnabled } from "../config/featureFlags";
 
 const ADSENSE_SRC = "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js";
 
@@ -21,10 +22,11 @@ function ensureAdSenseScript(client) {
 }
 
 export default function AdBanner() {
+  const monetizationEnabled = isMonetizationEnabled();
   const adClient = import.meta.env.VITE_ADSENSE_CLIENT;
   const adSlot = import.meta.env.VITE_ADSENSE_SLOT;
   const adTest = import.meta.env.VITE_ADSENSE_ADTEST === "on";
-  const enabled = Boolean(adClient && adSlot);
+  const enabled = monetizationEnabled && Boolean(adClient && adSlot);
 
   useEffect(() => {
     if (!enabled) {
@@ -39,6 +41,10 @@ export default function AdBanner() {
       // no-op
     }
   }, [enabled, adClient]);
+
+  if (!monetizationEnabled) {
+    return null;
+  }
 
   if (!enabled) {
     return (
