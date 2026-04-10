@@ -37,6 +37,10 @@ jobs:
           npm test
 
       - name: Build
+        env:
+          VITE_ENABLE_ANALYTICS: "true"
+          VITE_GA_MEASUREMENT_ID: "G-T1CBM7CK9K"
+          VITE_ENABLE_MONETIZATION: "false"
         run: npm run build
 
       - name: Upload Pages artifact
