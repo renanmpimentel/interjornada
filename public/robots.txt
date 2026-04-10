@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://interjornada.netlify.app/sitemap.xml
+Sitemap: https://renanmpimentel.github.io/interjornada/sitemap.xml
